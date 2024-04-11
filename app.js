@@ -1,11 +1,11 @@
-startGame() {
+function startGame() {
     document.getElementById('start-game-button').style.display = 'none';
     document.getElementById('game-area').style.display = 'block';
 }
 
-hitBuzzer() {
-    randomNumber = Math.random();
-    winThreshold = 0.5;
+function hitBuzzer() {
+    randomNumber = Math.random(); // Generate a random number
+    winThreshold = 0.5; // Set a threshold for winning
     resultDisplay = document.getElementById('result');
 
     if (randomNumber > winThreshold) {
