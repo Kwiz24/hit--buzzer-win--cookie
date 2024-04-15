@@ -1,20 +1,22 @@
-function startGame() {
-    document.getElementById('start-game-button').style.display = 'none';
-    document.getElementById('game-area').style.display = 'block';
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const startGameButton = document.querySelector('#start-game-button');
+    const gameArea = document.querySelector('#game-area');
+    const buzzerButton = document.querySelector('#buzzer');
 
-function hitBuzzer() {
-    randomNumber = Math.random(); // Generate a random number
-    winThreshold = 0.5; // Set a threshold for winning
-    resultDisplay = document.getElementById('result');
+    startGameButton.addEventListener('click', () => {
+        startGameButton.style.display = 'none';
+        gameArea.style.display = 'block';
+    });
 
-    if (randomNumber > winThreshold) {
-        resultDisplay.textContent = 'Congratulations! You win a cookie!';
-    } else {
-        resultDisplay.textContent = 'Sorry, you didn\'t win this time. Try again!';
-    }
-}
+    buzzerButton.addEventListener('click', () => {
+        const randomNumber = Math.random();
+        const winThreshold = 0.5;
+        const resultDisplay = document.querySelector('#result');
 
-
-document.getElementById('start-game-button').addEventListener('click', startGame);
-document.getElementById('buzzer').addEventListener('click', hitBuzzer);
+        if (randomNumber > winThreshold) {
+            resultDisplay.textContent = 'Congratulations! You win a cookie!';
+        } else {
+            resultDisplay.textContent = 'Sorry, you didn\'t win this time. Try again!';
+        }
+    });
+});
