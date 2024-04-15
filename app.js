@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const startGameButton = document.querySelector('#start-game-button');
+    const startGameButton = document.querySelector('#welcome-button');
     const gameArea = document.querySelector('#game-area');
+    const introContainer = document.querySelector('#intro-container');
     const buzzerButton = document.querySelector('#buzzer');
 
     startGameButton.addEventListener('click', () => {
-        startGameButton.style.display = 'none';
-        gameArea.style.display = 'block';
+        introContainer.style.opacity = '0';
+        setTimeout(() => {
+            introContainer.style.display = 'none';
+            gameArea.style.display = 'block';
+            gameArea.style.opacity = '1';
+        }, 500);
     });
 
     buzzerButton.addEventListener('click', () => {
@@ -20,4 +25,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-

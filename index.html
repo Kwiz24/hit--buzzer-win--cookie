@@ -5,28 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hit The Buzzer Win A Cookie</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-    <style>
-        body {
-            background-image: url(https://i.ibb.co/8X9GJYf/school-kid-playing-quiz-game-answering-question-standing-stand-button-boy-pressed-buzzer-first-raise.webp);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-        }
-    </style>
 </head>
 <body>
-    <h1>Hit The Buzzer Win A Cookie</h1>
-    <div>
-        <p id="line1">Welcome to Hit The Buzzer Win A Cookie<br>To win the game you must hit the buzzer and receive a cookie</p>
+    <div class="intro-container" id="intro-container">
+        <div class="intro-content">
+            <h1>Hit The Buzzer Win A Cookie</h1>
+            <p id="line1">Welcome to Hit The Buzzer Win A Cookie<br>To win the game you must hit the buzzer and receive a cookie</p>
+            <button class="intro-button" id="welcome-button">Welcome</button>
+        </div>
     </div>
-    <div>
-        <button id="start-game-button">Start Game</button>
-    </div>
-    <div id="game-area" style="display: none;">
-        <p>Press the buzzer to win a cookie!</p>
+    <div id="game-area">
+        <h1>Hit The Buzzer Win A Cookie</h1>
+        <p class="game-description">Press the buzzer to win a cookie!</p>
         <button id="buzzer">Buzzer</button>
         <p id="result"></p>
     </div>
+
+    <script defer src="app.js"></script>
 </body>
 </html>
